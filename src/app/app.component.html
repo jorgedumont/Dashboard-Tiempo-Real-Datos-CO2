@@ -1,0 +1,68 @@
+<div id="divtotal">
+  <div class="wrapper">
+    <div class="six">
+      <img src="../assets/UEMlogo.png" style="width:130px;height:75px;">
+    </div>
+    <div class="seven">
+      <img src="../assets/UEMlogo.png" style="width:130px;height:75px;">
+    </div>
+    <div class="five">
+      <h1> Control Dashboard Universidad Europea de Madrid</h1>
+    </div>
+    <div class="three">
+      <div id="div1">
+        <table>
+          <tr>
+            <th> Id </th>
+            <th> Etvoc </th>
+            <th> Eco2 </th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <p class="text" *ngFor="let item of items">
+                  {{item.id}}
+                </p>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <p class="text" *ngFor="let item of items">
+                  {{item.etvoc}}
+                </p>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <p class="text" *ngFor="let item of items">
+                  {{item.eco2}}
+                </p>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  <br><br><br><br>
+    <div class="four">
+      <div id="divTarjeta">
+      <h1><b>Valor actual co2:</b></h1>
+        <h2 id="ValorEntero" *ngFor="let item of items; let i = index"> 
+        <a *ngIf="i<1"class="span-tag tag">{{item.eco2}}</a>
+        </h2>
+      </div>
+      <div id="divTarjeta">
+        <h1><b>Valor actual etvoc:</b></h1>
+        <h2 id="ValorEntero" *ngFor="let item of items; let i = index"> 
+        <a *ngIf="i<1"class="span-tag tag">{{item.etvoc}}</a>
+        </h2>
+      </div>
+    </div>
+    <div class="one">
+      <canvas id="realtime">{{ chart }}</canvas>
+    </div>
+    <div class="two">
+        <canvas id="realtime2">{{ chart2 }}</canvas>
+    </div>
+  </div>
+</div>
